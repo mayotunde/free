@@ -23,7 +23,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
 	maxZoom: 19
 }).addTo(map);
 
-		var shpfile = new L.Shapefile('districtL.zip', {
+		var shpfile = new L.Shapefile('https://cdn.rawgit.com/mayotunde/free/gh-pages/Airports.ZIP', {
 			onEachFeature: function(feature, layer) {
 				if (feature.properties) {
 					layer.bindPopup(Object.keys(feature.properties).map(function(k) {
